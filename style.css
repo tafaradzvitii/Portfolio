@@ -316,4 +316,27 @@ footer {
   }
 }
 
+/* Mobile adjustments for navbar (phones) */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;      /* stack items vertically */
+    align-items: center;         /* center everything */
+  }
+
+  nav .nav-links {
+    display: flex;
+    flex-direction: row;          /* keep links in a row */
+    justify-content: center;      /* center links */
+    gap: 15px;
+    margin-bottom: 10px;          /* space below links */
+  }
+
+  nav .logo {
+    order: 1;                     /* place logo after links */
+    margin-top: 10px;             /* spacing above logo */
+    font-size: 1.5rem;            /* smaller font on mobile */
+  }
+}
+
+
 
