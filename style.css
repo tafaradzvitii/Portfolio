@@ -40,6 +40,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 nav .logo {
@@ -63,6 +64,21 @@ nav .nav-links li a {
 
 nav .nav-links li a:hover {
   color: #f0c330;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
 }
 
 /* ---------------- Hero Section ---------------- */
@@ -261,15 +277,20 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
   }
 
   nav .nav-links {
-    display: flex !important;
-    flex-direction: row;
+    display: none; /* hidden initially */
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav.active .nav-links {
+    display: flex; /* show links when hamburger clicked */
   }
 
   nav .logo {
@@ -278,6 +299,20 @@ footer {
     font-size: 1.5rem;
     width: 100%;
     text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
   }
 
   /* Hero */
@@ -301,7 +336,7 @@ footer {
 
   /* Projects */
   .project {
-    width: 90%; /* stack cards on small screens */
+    width: 90%;
   }
 
   /* Footer */
