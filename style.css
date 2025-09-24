@@ -69,8 +69,8 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('Screenshot\ 2025-09-19\ 205133.png') no-repeat center center/cover;
-  filter: blur(10px);  /* blur effect */
+  background-color: rgba(200, 200, 200, 0.2); /* light translucent gray */
+  backdrop-filter: blur(10px);  /* creates blur effect */
   z-index: 0;
 }
 
@@ -89,7 +89,10 @@ nav {
 /* Hero Content */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  text-align: center;
+  color: white; /* Text stands out */
+  padding: 20px;
 }
 
 /* Profile Picture in Hero */
@@ -213,6 +216,7 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
 
 
 
