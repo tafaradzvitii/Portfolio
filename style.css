@@ -74,7 +74,7 @@ nav .nav-links li a:hover {
   justify-content: center;
   overflow: hidden;
   color: white;
-  background: linear-gradient(135deg, #a0a0a0, #888888);
+  background: linear-gradient(135deg, #888888, #666666);
 }
 
 .hero::before {
@@ -286,3 +286,34 @@ footer {
     gap: 10px;
   }
 }
+
+/* Responsive Headings for Mobile */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.5rem;  /* smaller on tablets/phones */
+  }
+
+  h2 {
+    font-size: 1.5rem;  /* section headings */
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+
