@@ -48,7 +48,7 @@ nav .logo {
   color: #f0c330;
 }
 
-/* Desktop Links */
+/* Navbar links (desktop) */
 nav .nav-links {
   list-style: none;
   display: flex;
@@ -85,7 +85,7 @@ nav .nav-links li a:hover {
   width: 100%;
   height: 100%;
   background: inherit;
-  filter: blur(30px);
+  filter: blur(25px);
   transform: scale(1.1);
   z-index: 0;
 }
@@ -236,107 +236,76 @@ footer {
 }
 
 /* ---------------- Responsive Adjustments ---------------- */
-@media (max-width: 1024px) {
-  .project-list {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
 
+/* Medium screens (tablet) */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 1.8rem;
   }
-
   .hero p {
     font-size: 1rem;
   }
-
+  h2 {
+    font-size: 1.5rem;
+  }
   .skill-list {
     flex-direction: column;
     gap: 10px;
   }
-
-  nav .nav-links {
-    display: none; /* hide links for mobile menu */
-  }
-
-  /* Mobile menu button can be added here if desired */
 }
 
+/* Small screens (phones) */
 @media (max-width: 480px) {
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav .logo {
+    order: 1;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero */
   .profile-pic {
     max-width: 150px;
   }
-
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-
   .hero p {
     font-size: 0.9rem;
   }
-
   .hero .btn {
     padding: 10px 20px;
   }
 
-  nav .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* Responsive Headings for Mobile */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.5rem;  /* smaller on tablets/phones */
-  }
-
-  h2 {
-    font-size: 1.5rem;  /* section headings */
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h2 {
-    font-size: 1.3rem;
-  }
-
+  /* Section headings */
   h2 {
     font-size: 1.3rem;
   }
 
-  .hero p {
+  /* Projects */
+  .project {
+    width: 90%; /* stack cards on small screens */
+  }
+
+  /* Footer */
+  footer {
     font-size: 0.9rem;
   }
 }
-
-/* Mobile adjustments for navbar (phones) */
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;      /* stack items vertically */
-    align-items: center;         /* center everything */
-  }
-
-  nav .nav-links {
-    display: flex;
-    flex-direction: row;          /* keep links in a row */
-    justify-content: center;      /* center links */
-    gap: 15px;
-    margin-bottom: 10px;          /* space below links */
-  }
-
-  nav .logo {
-    order: 1;                     /* place logo after links */
-    margin-top: 10px;             /* spacing above logo */
-    font-size: 1.5rem;            /* smaller font on mobile */
-  }
-}
-
-
-
