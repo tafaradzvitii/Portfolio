@@ -64,16 +64,16 @@ nav .nav-links li a:hover {
   color: #f0c330;
 }
 
-/* ---------------- Hero Section ---------------- */
+/* ---------------- Hero Section (Blurred Gray Background) ---------------- */
 .hero {
   position: relative;
-  background-color: #888;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   color: white;
+  background: linear-gradient(135deg, #a0a0a0, #888888); /* gradient gray */
 }
 
 .hero::before {
@@ -83,8 +83,9 @@ nav .nav-links li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(200, 200, 200, 0.2);
-  backdrop-filter: blur(10px);
+  background: inherit; /* same gradient */
+  filter: blur(30px);  /* creates the blurred effect */
+  transform: scale(1.1); /* enlarge slightly to hide edges */
   z-index: 0;
 }
 
@@ -95,6 +96,7 @@ nav .nav-links li a:hover {
   padding: 20px;
 }
 
+/* Profile Picture */
 .profile-pic {
   width: 100%;
   max-width: 200px;
@@ -105,6 +107,7 @@ nav .nav-links li a:hover {
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Hero Text */
 .hero h2 {
   font-size: 2.2rem;
   margin: 10px 0;
@@ -119,6 +122,7 @@ nav .nav-links li a:hover {
   margin-bottom: 20px;
 }
 
+/* Hero Button */
 .hero .btn {
   display: inline-block;
   background-color: #f0c330;
@@ -142,7 +146,7 @@ nav .nav-links li a:hover {
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
-  margin-top: -50px; /* overlap slightly with hero */
+  margin-top: -50px; /* slight overlap with hero */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
