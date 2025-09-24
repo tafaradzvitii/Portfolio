@@ -51,6 +51,7 @@ nav {
 /* Hero Section */
 .hero {
   position: relative;
+  background-color: #888; /* Gray background */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -212,5 +213,6 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
 
 
